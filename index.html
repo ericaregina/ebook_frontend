@@ -1,0 +1,683 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domine Frontend - Do Zero ao Profissional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .module-item:hover .module-icon {
+            transform: rotate(10deg) scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40" alt="Logo CodeMaster - Ícone de um monitor com símbolo de chave angular representando programação" class="rounded-full">
+                <span class="text-xl font-bold text-purple-700">CodeMaster</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#sobre" class="text-gray-600 hover:text-purple-700 font-medium">Sobre</a>
+                <a href="#conteudo" class="text-gray-600 hover:text-purple-700 font-medium">Conteúdo</a>
+                <a href="#depoimentos" class="text-gray-600 hover:text-purple-700 font-medium">Depoimentos</a>
+                <a href="#precos" class="text-gray-600 hover:text-purple-700 font-medium">Planos</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    Domine Frontend e Transforme sua Carreira
+                </h1>
+                <p class="text-xl mb-8 text-purple-100">
+                    Do zero ao profissional com nosso ebook completo. Aprenda HTML, CSS, JavaScript e frameworks modernos passo a passo.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#precos" class="bg-white text-purple-700 font-bold py-3 px-8 rounded-lg text-center hover:bg-purple-100 transition duration-300">
+                        Comprar Agora
+                    </a>
+                    <a href="#conteudo" class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg text-center hover:bg-white hover:text-purple-700 transition duration-300">
+                        Ver Conteúdo
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://placehold.co/600x700" alt="Ebook aberto mostrando código HTML e CSS com ilustrações de componentes web ao redor" class="rounded-lg shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-purple-700 mb-2">10+</div>
+                    <div class="text-gray-600">Capítulos</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-purple-700 mb-2">500+</div>
+                    <div class="text-gray-600">Páginas</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-purple-700 mb-2">50+</div>
+                    <div class="text-gray-600">Exercícios</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-purple-700 mb-2">30+</div>
+                    <div class="text-gray-600">Projetos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Por Que Escolher Nosso Ebook?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Aprenda frontend da maneira certa, com um método comprovado que já ajudou milhares de alunos.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="text-purple-700 text-4xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Aprendizado Prático</h3>
+                    <p class="text-gray-600">Teoria + prática com projetos reais que podem ser usados no seu portfólio.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="text-purple-700 text-4xl mb-4">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Para Todos os Níveis</h3>
+                    <p class="text-gray-600">Do absoluto iniciante ao desenvolvedor que quer se especializar.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="text-purple-700 text-4xl mb-4">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Atualizações Gratuitas</h3>
+                    <p class="text-gray-600">Receba todas as atualizações futuras do material sem custo adicional.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="text-purple-700 text-4xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Suporte Dedicado</h3>
+                    <p class="text-gray-600">Tire suas dúvidas diretamente com nossa equipe de especialistas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conteudo" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">O Que Você Vai Aprender</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Um currículo completo para se tornar um desenvolvedor frontend profissional.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="module-item bg-gray-50 rounded-lg p-6 mb-6 flex items-start cursor-pointer transition duration-300 hover:bg-purple-50">
+                    <div class="module-icon bg-purple-100 text-purple-700 p-3 rounded-full mr-6 transition duration-300">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Fundamentos de HTML e CSS</h3>
+                        <ul class="list-disc list-inside text-gray-600 pl-4">
+                            <li>Sintaxe e estrutura do HTML5</li>
+                            <li>Seletores CSS e propriedades essenciais</li>
+                            <li>Flexbox e Grid Layout</li>
+                            <li>Design responsivo e mobile-first</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-item bg-gray-50 rounded-lg p-6 mb-6 flex items-start cursor-pointer transition duration-300 hover:bg-purple-50">
+                    <div class="module-icon bg-purple-100 text-purple-700 p-3 rounded-full mr-6 transition duration-300">
+                        <i class="fab fa-js-square text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">JavaScript Moderno</h3>
+                        <ul class="list-disc list-inside text-gray-600 pl-4">
+                            <li>Fundamentos de programação em JS</li>
+                            <li>Manipulação do DOM</li>
+                            <li>ES6+ (Arrow functions, Promises, etc)</li>
+                            <li>Async/Await e consumo de APIs</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-item bg-gray-50 rounded-lg p-6 mb-6 flex items-start cursor-pointer transition duration-300 hover:bg-purple-50">
+                    <div class="module-icon bg-purple-100 text-purple-700 p-3 rounded-full mr-6 transition duration-300">
+                        <i class="fab fa-react text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Frameworks Frontend</h3>
+                        <ul class="list-disc list-inside text-gray-600 pl-4">
+                            <li>Introdução a React e Vue.js</li>
+                            <li>Gerenciamento de estado</li>
+                            <li>Componentização</li>
+                            <li>Routing e Single Page Applications</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-item bg-gray-50 rounded-lg p-6 mb-6 flex items-start cursor-pointer transition duration-300 hover:bg-purple-50">
+                    <div class="module-icon bg-purple-100 text-purple-700 p-3 rounded-full mr-6 transition duration-300">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Ferramentas Profissionais</h3>
+                        <ul class="list-disc list-inside text-gray-600 pl-4">
+                            <li>Git e GitHub para controle de versão</li>
+                            <li>Webpack e Vite</li>
+                            <li>Debugging e DevTools</li>
+                            <li>Otimização de performance</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-item bg-gray-50 rounded-lg p-6 mb-6 flex items-start cursor-pointer transition duration-300 hover:bg-purple-50">
+                    <div class="module-icon bg-purple-100 text-purple-700 p-3 rounded-full mr-6 transition duration-300">
+                        <i class="fas fa-briefcase text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Preparação Profissional</h3>
+                        <ul class="list-disc list-inside text-gray-600 pl-4">
+                            <li>Como montar um portfólio impressionante</li>
+                            <li>Dicas para entrevistas técnicas</li>
+                            <li>Negociação salarial</li>
+                            <li>Freelancing e mercado de trabalho</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Projetos Que Você Vai Construir</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Aprenda criando projetos reais para seu portfólio.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://placehold.co/600x400" alt="Dashboard administrativo moderno com gráficos e métricas usando React e Tailwind CSS" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Admin Dashboard</h3>
+                        <p class="text-gray-600 mb-4">Dashboard completo com React, Tailwind CSS e Chart.js.</p>
+                        <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">React</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://placehold.co/600x400" alt="E-commerce elegante com carrinho de compras interativo construído com Vue.js" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Loja Online</h3>
+                        <p class="text-gray-600 mb-4">E-commerce completo com carrinho e checkout.</p>
+                        <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Vue.js</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://placehold.co/600x400" alt="Aplicativo de clima com busca por localização e exibição de dados meteorológicos em tempo real" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">App de Clima</h3>
+                        <p class="text-gray-600 mb-4">Consumindo API meteorológica com fetch e async/await.</p>
+                        <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <img src="https://placehold.co/300x300" alt="Foto do autor, um profissional de tecnologia com experiência em desenvolvimento frontend sorrindo, usando óculos e camisa social" class="rounded-full w-64 h-64 object-cover border-4 border-purple-200">
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Conheça o Autor</h2>
+                    <p class="text-xl text-gray-600 mb-6">
+                        Com mais de 10 anos de experiência como desenvolvedor frontend, eu já trabalhei em projetos para grandes empresas e startups, e agora estou compartilhando todo meu conhecimento neste ebook.
+                    </p>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Minha missão é ajudar pessoas a transformarem suas carreiras através da programação, ensinando de forma clara e prática.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-purple-700 hover:text-purple-900">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-purple-700 hover:text-purple-900">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-purple-700 hover:text-purple-900">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">O Que Dizem Nossos Alunos</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Veja como este ebook transformou a carreira de outros desenvolvedores.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "O melhor material sobre frontend que já comprei! Consegui minha primeira vaga como desenvolvedor júnior depois de aplicar o que aprendi aqui."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50" alt="Aluno feliz sorrindo com fundo desfocado, representando um ex-aluno satisfeito" class="rounded-full w-12 h-12 object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Carlos Silva</h4>
+                            <p class="text-gray-500 text-sm">Desenvolvedor Frontend Júnior</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "A didática é excelente, explica conceitos complexos de forma simples. Em 3 meses eu já estava fazendo freelas e ganhando meu próprio dinheiro."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50" alt="Mulher jovem trabalhando em laptop em um café, representando uma aluna freelancer" class="rounded-full w-12 h-12 object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Ana Oliveira</h4>
+                            <p class="text-gray-500 text-sm">Freelancer Frontend</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Mesmo com conhecimento básico, consegui acompanhar e melhorar muito minhas habilidades. Os projetos práticos fizeram toda diferença no meu aprendizado."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50" alt="Homem sorrindo em frente a um computador com linhas de código visíveis na tela" class="rounded-full w-12 h-12 object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Roberto Santos</h4>
+                            <p class="text-gray-500 text-sm">Estudante de TI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="precos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Escolha Seu Plano</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Investimento que transforma seu futuro na programação.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="pricing-card bg-white border border-gray-200 rounded-xl p-8 transition duration-300">
+                    <h3 class="text-xl font-bold mb-4">Básico</h3>
+                    <div class="text-4xl font-bold text-purple-700 mb-6">R$ 97</div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Ebook completo (PDF)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Acesso aos códigos-fonte</span>
+                        </li>
+                        <li class="flex items-start opacity-50">
+                            <i class="fas fa-times text-gray-400 mr-2 mt-1"></i>
+                            <span>Suporte prioritário</span>
+                        </li>
+                        <li class="flex items-start opacity-50">
+                            <i class="fas fa-times text-gray-400 mr-2 mt-1"></i>
+                            <span>Certificado de conclusão</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Comprar Agora
+                    </button>
+                </div>
+                
+                <div class="pricing-card bg-purple-700 text-white rounded-xl p-8 shadow-xl transition duration-300 relative">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-purple-800 px-4 py-1 text-sm font-bold rounded-bl-lg rounded-tr-lg">
+                        MAIS POPULAR
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Profissional</h3>
+                    <div class="text-4xl font-bold mb-6">R$ 197</div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-2 mt-1"></i>
+                            <span>Ebook completo + versão EPUB</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-2 mt-1"></i>
+                            <span>Acesso aos códigos-fonte</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-2 mt-1"></i>
+                            <span>Suporte por email e comunidade</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-2 mt-1"></i>
+                            <span>Certificado de conclusão</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mr-2 mt-1"></i>
+                            <span>10 templates exclusivos</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white hover:bg-gray-100 text-purple-700 font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Comprar Agora
+                    </button>
+                </div>
+                
+                <div class="pricing-card bg-white border border-gray-200 rounded-xl p-8 transition duration-300">
+                    <h3 class="text-xl font-bold mb-4">Premium</h3>
+                    <div class="text-4xl font-bold text-purple-700 mb-6">R$ 297</div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Tudo do Plano Profissional</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>1 hora de mentoria individual</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Revisão do seu portfólio</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>5 webinars exclusivos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Carteira de projetos avançados</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Comprar Agora
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Pagamento seguro via</p>
+                <div class="flex justify-center space-x-6">
+                    <i class="fab fa-cc-visa text-3xl text-gray-600"></i>
+                    <i class="fab fa-cc-mastercard text-3xl text-gray-600"></i>
+                    <i class="fab fa-cc-paypal text-3xl text-gray-600"></i>
+                    <i class="fab fa-pix text-3xl text-gray-600"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Perguntas Frequentes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Tire suas dúvidas sobre o ebook e o processo de compra.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left bg-white px-6 py-4 rounded-lg shadow-sm hover:bg-purple-50 transition duration-300">
+                        <span class="text-lg font-medium">Para quem é este ebook?</span>
+                        <i class="fas fa-plus text-purple-700"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-white rounded-b-lg">
+                        <p class="text-gray-600">Este ebook é perfeito tanto para iniciantes absolutos que nunca programaram antes quanto para desenvolvedores que querem se aprofundar em frontend moderno. O conteúdo é progressivo, começando do zero até tópicos avançados.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left bg-white px-6 py-4 rounded-lg shadow-sm hover:bg-purple-50 transition duration-300">
+                        <span class="text-lg font-medium">Como recebo o ebook após a compra?</span>
+                        <i class="fas fa-plus text-purple-700"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-white rounded-b-lg">
+                        <p class="text-gray-600">Imediatamente após a confirmação do pagamento, você receberá um email com os links para download de todas as versões do ebook (PDF, EPUB) e acesso à área de membros com os materiais complementares.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left bg-white px-6 py-4 rounded-lg shadow-sm hover:bg-purple-50 transition duration-300">
+                        <span class="text-lg font-medium">Existe garantia?</span>
+                        <i class="fas fa-plus text-purple-700"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-white rounded-b-lg">
+                        <p class="text-gray-600">Sim! Oferecemos garantia incondicional de 7 dias. Se por qualquer motivo você não gostar do material, basta nos enviar um email dentro desse período e devolveremos 100% do seu dinheiro, sem perguntas.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left bg-white px-6 py-4 rounded-lg shadow-sm hover:bg-purple-50 transition duration-300">
+                        <span class="text-lg font-medium">Posso parcelar o pagamento?</span>
+                        <i class="fas fa-plus text-purple-700"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-white rounded-b-lg">
+                        <p class="text-gray-600">Sim, os pagamentos via cartão de crédito podem ser parcelados em até 12x (com juros conforme seu cartão). Pagamentos via PIX e boleto são à vista com 5% de desconto.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left bg-white px-6 py-4 rounded-lg shadow-sm hover:bg-purple-50 transition duration-300">
+                        <span class="text-lg font-medium">O material recebe atualizações?</span>
+                        <i class="fas fa-plus text-purple-700"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-white rounded-b-lg">
+                        <p class="text-gray-600">Sim! O mundo do frontend está sempre evoluindo e nós mantemos o ebook atualizado. Todas as atualizações futuras serão disponibilizadas gratuitamente para quem já comprou.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 hero-gradient text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para Transformar sua Carreira?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Comece hoje sua jornada no desenvolvimento frontend e dê o primeiro passo para se tornar um profissional bem-sucedido.</p>
+            <a href="#precos" class="bg-white text-purple-700 font-bold py-3 px-10 rounded-lg inline-block hover:bg-purple-100 transition duration-300 text-lg">
+                Quero Meu Ebook Agora
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="https://placehold.co/30x30" alt="Logo CodeMaster pequeno em fundo escuro" class="rounded-full">
+                        <span class="text-xl font-bold text-white">CodeMaster</span>
+                    </div>
+                    <p class="mb-4">Transformando aspirantes a programadores em profissionais de frontend desde 2023.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#sobre" class="hover:text-white">Sobre</a></li>
+                        <li><a href="#conteudo" class="hover:text-white">Conteúdo</a></li>
+                        <li><a href="#depoimentos" class="hover:text-white">Depoimentos</a></li>
+                        <li><a href="#precos" class="hover:text-white">Planos</a></li>
+                        <li><a href="#" class="hover:text-white">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Contato</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i>
+                            <span>contato@codemaster.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2"></i>
+                            <span>(11) 98765-4321</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>São Paulo, Brasil</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Newsletter</h3>
+                    <p class="mb-4">Receba dicas gratuitas e novidades sobre frontend.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-500 w-full">
+                        <button type="submit" class="bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p>&copy; 2023 CodeMaster. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-purple-700 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-purple-800">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                
+                if (answer.classList.contains('hidden')) {
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                } else {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                }
+            });
+        });
+ 
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+       
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
